@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Student Registration Form</h1>
+        <form action="" style="border: 3px red solid;">
+            <div class="form-group mb-2" >
+                <label for="clgname" class="form-label">Select College Name :</label>
+                <select name="clgname" id="clgname" class="form-control">
+                <option value="" disabled selected>select Your College Name</option>
+                    <option value="VSM Degree College">VSM Degree College</option>
+                    <option value="VSM Engineering College">VSM Engineering College</option>
+                    <option value="VSM Inter College">VSM Inter College</option>
+                    <option value="other">Other</option>
+                    </select>
+                    <input type="text" class="form-control mt-2" id="otherclg" name="otherclg" placeholder="Enetr Your College Name" style="display: none;">
+                
+            </div>
+            <div class="form-group  mb-2">
+                <label for="studentRollNo" class="form-label">Student RollNo :</label>
+                <input type="text" class="form-control mb-2" id="stdRollNo" name="stdRollNo" placeholder="Enter Student RollNo" required>
+            </div>
+            <div class="form-group  mb-2">
+            <label for="studentName" class="form-label">Student Name :</label>
+            <input type="text" class="form-control mb-2" id="stdName" name="stdName" placeholder="Enter Student Name" required>
+            </div>
+            <div class="form-group  mb-2">
+            <label for="studentEmail" class="form-label">Student Email :</label>
+            <input type="email" class="form-control  mb-2" id="stdEmail" name="stdEmail" placeholder="Enter Student Email" required>
+            </div>
+            <div class="form-group mb-2">
+            <label for="studentPhNo" class="form-label">Student PhNo :</label>
+            <input type="number" class="form-control  mb-2" id="stdPhnoNo" name="stdPhNo" placeholder="Enter Student Phone No" required>
+            </div>
+            <div class="form-group  mb-2">
+            <label for="studentAddress" class="form-label">Student Address :</label>
+            <input type="text" class="form-control  mb-2" id="stdAdd" name="stdadd" placeholder="Enter Student Address" required>
+
+            </div>
+            <!-- <div class="form-group">
+            <label for="studenttext">Student RollNo :</label>
+            <input type="text" class="form-control" id="stdRollNo" name="stdRollNo" placeholder="Enter Student RollNo" required>
+            </div>
+            <div class="form-group"></div> -->
+             <button class="btn btn-primary">Save</button>
+        </form>
+    </div>
+    <script>
+        $('#clgname').change(function() {
+            if ($(this).val() == 'Other') {
+                $('#otherclg').show();
+            } else {
+                $('#otherclg').hide();
+            }
+        });
+    </script>
+</body>
+</html>
